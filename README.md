@@ -23,3 +23,24 @@ Implementations:
 
 All programs should be run from the ``data/`` directory so they find
 the required files.
+
+## linux quickstart instructions
+
+### Build on linux
+
+This is tested on Ubuntu 12.04:
+
+    mkdir build
+    cd build
+    cmake .. && make
+
+Now change to the ``data/`` directory and run your just-build
+executable:
+
+    cd ../data
+    ../build/bin/calib_test_osg
+
+Python scripts aren't copied into ``build/bin/``, so run from the
+``src/`` directory:
+
+    python ../src/calib_test_pyglet.py
