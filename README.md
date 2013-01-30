@@ -14,17 +14,19 @@ OpenGL](http://strawlab.org/2011/11/05/augmented-reality-with-OpenGL/).
 
 Implementations:
 
- * Python, no OpenGL (numpy for geometry, matplotlib for drawning) ``src/calib_test_numpy.py``.
- * Python (pyglet for OpenGL and GUI) ``src/calib_test_pyglet.py``.
- * Python (PyOpenGL for OpenGL and GUI) ``src/calib_test_pyglet.py``.
- * C (OpenGL, GLUT for GUI) ``src/calib_test_opengl.c``.
- * C++ (OpenSceneGraph) ``src/calib_test_osg.cpp``.
- * C/GLSL (OpenGL, GLUT for GUI) ``src/calib_test_glsl.c``, ``glsl.vert``, ``glsl.frag``.
+ * Python, no OpenGL (numpy for geometry, matplotlib for drawning) `src/calib_test_numpy.py`.
+ * Python (pyglet for OpenGL and GUI) `src/calib_test_pyglet.py`.
+ * Python (PyOpenGL for OpenGL and GUI) `src/calib_test_pyglet.py`.
+ * C (OpenGL, GLUT for GUI) `src/calib_test_opengl.c`.
+ * C++ (OpenSceneGraph) `src/calib_test_osg.cpp`.
+ * C/GLSL (OpenGL, GLUT for GUI) `src/calib_test_glsl.c`, `glsl.vert`, `glsl.frag`.
 
-All programs should be run from the ``data/`` directory so they find
+All programs should be run from the `data/` directory so they find
 the required files.
 
-## linux quickstart instructions
+## Quickstart instructions
+
+So far only linux has been tested.
 
 ### Build on linux
 
@@ -34,13 +36,15 @@ This is tested on Ubuntu 12.04:
     cd build
     cmake .. && make
 
-Now change to the ``data/`` directory and run your just-build
+### Run on linux
+
+Now change to the `data/` directory and run your just-build
 executable:
 
     cd ../data
     ../build/bin/calib_test_osg
 
-Python scripts aren't copied into ``build/bin/``, so run from the
-``src/`` directory:
+Python scripts aren't copied into `build/bin/`, so run from the
+`src/` directory:
 
     python ../src/calib_test_pyglet.py
