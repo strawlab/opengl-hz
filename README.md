@@ -18,7 +18,7 @@ Implementations:
  * Python (pyglet for OpenGL and GUI) ``src/calib_test_pyglet.py``.
  * Python (PyOpenGL for OpenGL and GUI) ``src/calib_test_pyglet.py``.
  * C (OpenGL, GLUT for GUI) ``src/calib_test_opengl.c``.
- * C++ (OpenSceneGraph) ``src/calib_test_osg.cpp`.
+ * C++ (OpenSceneGraph) ``src/calib_test_osg.cpp``.
  * C/GLSL (OpenGL, GLUT for GUI) ``src/calib_test_glsl.c``, ``glsl.vert``, ``glsl.frag``.
 
 All programs should be run from the ``data/`` directory so they find
