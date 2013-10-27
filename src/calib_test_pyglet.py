@@ -41,13 +41,12 @@ class PointCylinder(object):
         gl.glVertexPointer(3, gl.GL_FLOAT, 0, vertices)
         gl.glEnableClientState(gl.GL_COLOR_ARRAY)
         gl.glColorPointer(3, gl.GL_FLOAT, 0, colors)
-        gl.glDrawElements(gl.GL_POINTS, len(indices), gl.GL_UNSIGNED_INT, indices)
+        gl.glDrawElements(gl.GL_LINES, len(indices), gl.GL_UNSIGNED_INT, indices)
         gl.glPopClientAttrib()
 
         gl.glEndList()
 
     def draw(self):
-        gl.glPointSize(5.0)
         gl.glCallList(self.list)
         gl.glColor3f(1.0, 1.0, 1.0)
 

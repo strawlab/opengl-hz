@@ -160,7 +160,6 @@ void set_matrix(float* m,
 void on_draw() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    glPointSize(5.0);
     glCallList(CYL);
     glColor3f(1.0, 1.0, 1.0);
 
@@ -269,7 +268,7 @@ unsigned int PointCylinder() {
     glVertexPointer(3, GL_FLOAT, 0, vertices);
     glEnableClientState(GL_COLOR_ARRAY);
     glColorPointer(3, GL_FLOAT, 0, colors);
-    glDrawElements(GL_POINTS, len_indices, GL_UNSIGNED_INT, indices);
+    glDrawElements(GL_LINES, len_indices, GL_UNSIGNED_INT, indices);
     glPopClientAttrib();
 
     glEndList();
