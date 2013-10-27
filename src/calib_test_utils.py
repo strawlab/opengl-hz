@@ -1,10 +1,19 @@
 from __future__ import division
-import scipy.linalg
 import numpy as np
+
+def rq(A):
+    # see first comment at
+    # http://leohart.wordpress.com/2010/07/23/rq-decomposition-from-qr-decomposition/
+    from numpy.linalg import qr
+    from numpy import flipud
+    Q,R = qr(flipud(A).T)
+    R = flipud(R.T)
+    Q = Q.T
+    return R[:,::-1],Q[::-1,:]
 
 def my_rq(M):
     """RQ decomposition, ensures diagonal of R is positive"""
-    R,K = scipy.linalg.rq(M)
+    R,K = rq(M)
     n = R.shape[0]
     for i in range(n):
         if R[i,i]<0:
